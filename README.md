@@ -1,5 +1,6 @@
 # cse210-ww-student-template
-This is the starter code for students in the worldwide content version of CSE 210.
+Hi Diego Bellido 
+Here We have the whole projects that you will do this semester
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
