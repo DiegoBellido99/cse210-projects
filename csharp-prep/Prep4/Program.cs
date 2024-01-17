@@ -44,7 +44,31 @@ class Program
             }
          }
          Console.WriteLine($"The maximun value is {max}");
-     
+
+         int min = numbers[0];
+
+         foreach( int values in numbers)
+         {
+            if ( values > 0 && values < min)
+            {
+                min = values;
+            }
+         }
+         Console.WriteLine($"the smallest positive value is {min}");
+
+         numbers.Reverse();
+
+         static void PrintList (List<int> list)
+         {
+            foreach (var number in list)
+            {
+             Console.WriteLine(number);
+            }
+         }
+         Console.WriteLine("  The sorted list is: ");
+         PrintList(numbers);
+        
+
         
     }
 }
