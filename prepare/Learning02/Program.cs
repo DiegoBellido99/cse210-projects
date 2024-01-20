@@ -1,35 +1,49 @@
 using System;
+using System.Collections.Generic;
+using System.IO; 
+
 
 class Program
 {
     static void Main(string[] args)
     {
-        Job job1 = new Job();
-        job1._jobTitle = "Software Engineer";
-        job1._company = "Microsoft";
-        job1._startYear = 2019 ;
-        job1._endYear = 2023 ;
+        Console.WriteLine("Welcome to the Journal Program");        
+        int option = 1 ;
+        Journal journal = new Journal();
 
-        Job job2 = new Job();
-        job2._jobTitle = "Frontend Developer";
-        job2._company = "Amazon" ;
-        job2._startYear = 2017 ;
-        job2._endYear = 2018 ;
+        while (option != 5)
+        {
+            Console.WriteLine("Please select one of the following choices");
+            Console.WriteLine("1.Write");
+            Console.WriteLine("2.Display");
+            Console.WriteLine("3.Load");
+            Console.WriteLine("4.Save");
+            Console.WriteLine("5.Quit ");
 
-        Job job3 = new Job();
-        job3._jobTitle = "Software Quality Engineer";
-        job3._company = "Facebook";
-        job3._startYear = 2014;
-        job3._endYear = 2017;
+            Console.Write("What do you want to do ?");
+            string UserInput = Console.ReadLine();
+            option= int.Parse(UserInput);
 
-        Resume MyOwnResume = new Resume();
-        MyOwnResume._name= "Diego Bellido";
-        MyOwnResume._jobs.Add(job1);
-        MyOwnResume._jobs.Add(job2);
-        MyOwnResume._jobs.Add(job3);
-
-        MyOwnResume.Display();
+            if (option == 1)
+            {
+                journal.AddEntry();               
+            }
+            else if (option ==2)
+            {
+                journal.DisplayAll();
+            }
+            
+            else if (option == 4)
+            {
+                journal.SaveToField();
+            }
+            else if (option == 3)
+            {
+                Console.WriteLine("Enter the file name to load: ");
+                string fileName = Console.ReadLine();
+                journal.LoadFroamFile(fileName);
+            }
+        }
         
-
     }
 }
