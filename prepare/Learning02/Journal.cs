@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO; 
+using System.IO;
+using System.IO.Enumeration;
 
 
 public class Journal 
@@ -48,7 +49,7 @@ public class Journal
         {
             foreach(var entry in _entries)
             {
-                outputFile.WriteLine($"{entry.Date.ToShortDateString()}, {entry.PromptText}, {entry.EntryText}");
+                outputFile.WriteLine($"{entry._date.ToShortDateString()}, {entry._promptText}, {entry._entryText}");
             }
 
         }
@@ -68,8 +69,6 @@ public class Journal
                         string line = inputFile.ReadLine();
 
                         string[] parts = line.Split(',');
-
-        
 
                         if (parts.Length == 3)
 
@@ -94,4 +93,17 @@ public class Journal
                 }
         
     }  
+
+    public void DeleteLine(string FileName)
+    {
+        string file = FileName;
+        List<string> line = File.ReadAllLines(FileName).ToList();
+
+        if(line.Count > 0)
+        {
+            line.RemoveAt(line.Count -1);
+            File.WriteAllLines(file, line);
+            Console.WriteLine("The last line was delete");
+        }
+    }
 }

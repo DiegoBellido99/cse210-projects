@@ -16,7 +16,11 @@ public PromptGenerator ()
         "What was the best part of my day?",
         "How did I see the hand of the Lord in my life today?",
         "What was the strongest emotion I felt today?",
-        "If I had one thing I could do over today, what would it be?"
+        "If I had one thing I could do over today, what would it be?",
+        "Are you doing what you really want to do?",
+        "What challenge have you overcome today?",
+        "What did you do today to achieve your long-term goal?"
+
         
      };
     }
