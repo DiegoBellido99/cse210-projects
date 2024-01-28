@@ -23,7 +23,7 @@ public class References
 
    public string DisplayText()
    {
-    return $"{_book} {_chapter} : {_verse}-{_endVerse}  ";
+    return $"{_book} {_chapter} : {_verse} ";
    }
 
 }

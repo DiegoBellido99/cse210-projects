@@ -1,3 +1,6 @@
+//The extra extra function I added was that the user has the option//
+// to enter the writing they want to memorize.//
+
 class Program
 {
     static void Main()

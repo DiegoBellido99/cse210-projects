@@ -76,8 +76,9 @@ private List<Word> CreateWordListFromText(string text)
         return true;
     }
 
-    public void addScripture(string scripture)
-    {
+    public void addScripture(  string scripture)
+    {  
+        
        _words = CreateWordListFromText(scripture);
        
     }
