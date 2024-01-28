@@ -8,9 +8,9 @@ public class Scripture
 public Scripture ()
 
 {
-    _references= new References("Juan",10,5,5);
+    _references= new References("Nephi",3,7);
 
-    _words=CreateWordListFromText(" Estas son varias palabras que el progrmama va a borrar ,yo decidire cuales seran ");
+    _words=CreateWordListFromText(" And it came to pass that I, Nephi, said unto my father:\n I will go and do the things which the Lord hath commanded, for I know that the Lord \ngiveth no commandments unto the children of men, \nsave he shall prepare a way for them that they may accomplish\n the thing which he commandeth them. ");
 }
 
 private List<Word> CreateWordListFromText(string text)
