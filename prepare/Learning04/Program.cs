@@ -1,21 +1,53 @@
 using System;
+using System.Globalization;
 
 class Program
 {
     static void Main(string[] args)
     {
-        
-      Assignments assignments = new Assignments("Ariana" , " English");
-      Console.WriteLine(assignments.GetSummary());
+       int option = 1;
 
-      MathAssignments mathAssignments = new MathAssignments("7.3" ,"8-19","Diego Bellido","Programing");
+       while (option != 5)
+       {
+            Console.WriteLine("Menu Options :");
+            Console.WriteLine("1.Start breathing activity");
+            Console.WriteLine("2.Start reflecting activity");
+            Console.WriteLine("3.Start listing activity");
+            Console.WriteLine("4.Special Verse activity");
+            Console.WriteLine("5.Quit ");
+    
+            Console.Write("Select a choice from the menu: ");
+            option = int.Parse(Console.ReadLine());
+            
+            if (option == 1)
+            {
+                Console.Clear();
+                BreathingActivity breathingActivity = new BreathingActivity("name","description",10); 
+                breathingActivity.Run();  
+                Console.Clear(); 
+            }
+            
+            else if (option == 2)
+            {
+                Console.Clear();
+                ReflectingActivity reflectingActivity = new ReflectingActivity("name","description",10);
+                reflectingActivity.Run();
+            }
 
-      Console.WriteLine(mathAssignments.GetSummary());
-      Console.WriteLine(mathAssignments.GetHomeWorkList());
+            else if(option == 3)
+            {
+                Console.Clear();
+                ListingActivity listingActivity = new ListingActivity(1,"name","description",30);
+                listingActivity.Run();               
+            }
 
-      WritingAssignments writingAssignments = new WritingAssignments("100 años de soledad","Raffo Hernandez","Literature");
-      Console.WriteLine(writingAssignments.GetSummary());
-      Console.WriteLine(writingAssignments.GetWritingInformation());
-              
+            else if (option == 4)
+            {
+                Console.Clear();
+                SpecialVerse specialVerse= new SpecialVerse("name","description",30);
+                specialVerse.Run();
+            }
+        }
+
     }
 }
