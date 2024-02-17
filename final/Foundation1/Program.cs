@@ -1,4 +1,9 @@
 using System;
+//In this code I can create different videos with their title and       //
+// the name of the company that created the video, each video contains//
+//  the comments and the name of the person who wrote it. It also keeps//
+//   track of how many comments each video has.//
+
 
 class Program
 {

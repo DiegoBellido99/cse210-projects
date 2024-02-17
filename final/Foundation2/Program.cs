@@ -1,4 +1,8 @@
 using System;
+// In this code I was able to create 3 orders, each one //
+// shows the list of products purchased, the person who //
+// placed the order, and the total cost of their order  //
+
 
 class Program
 {
